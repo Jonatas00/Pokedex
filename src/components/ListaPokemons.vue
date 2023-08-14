@@ -6,7 +6,7 @@ const urlBaseImagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/
 const searchPokemonField = ref("")
 const pokemonsFiltered = computed(() => {
   if (pokemons.pokemons && searchPokemonField.value) {
-    return pokemons.pokemons.filter( pokemon => pokemon.name.includes(searchPokemonField.value.toLowerCase()))
+    return pokemons.pokemons.filter( pokemon => pokemon.name.includes(searchPokemonField.value.toLowerCase().trim()))
   }
   return pokemons.pokemons
 })
