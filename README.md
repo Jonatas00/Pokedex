@@ -8,4 +8,4 @@ API: https://pokeapi.co
 
 É possível realizar a busca do pokémon pelo nome utilzando a barra de pesquisa
 
-[Confira o aplicativo funcionando](jonatas00-pokedex.vercel.app)
+[Confira o aplicativo funcionando](https://jonatas00-pokedex.vercel.app)
