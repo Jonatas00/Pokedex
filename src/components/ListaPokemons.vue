@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { capitalize, computed, ref } from 'vue';
 
 const pokemons = defineProps(["pokemons"])
 const urlBaseImagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/`
@@ -17,7 +17,7 @@ const pokemonsFiltered = computed(() => {
     <input type="text" v-model="searchPokemonField" placeholder="Pesquise pelo nome do pokemon">
     <div class="listaPokemons">
       <div class="cardPokemon" v-for="pokemon in pokemonsFiltered">
-        {{ pokemon.name }}
+        {{ capitalize(pokemon.name) }}
         <img :src="urlBaseImagem + pokemon.url.split('/')[6] + '.png'" :alt="pokemon.name" width="200">
       </div>
     </div>
